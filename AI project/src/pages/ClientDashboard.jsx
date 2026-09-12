@@ -47,10 +47,10 @@ export default function ClientDashboard({
         <div>
           <h4 className="fw-bold text-dark mb-1">
             <i className="bi bi-shield-check text-primary me-2"></i>
-            Security Guard Monitoring Dashboard
+            Client Monitoring Dashboard
           </h4>
           <p className="text-muted small mb-0">
-            Real-time campus CCTV feeds & AI activity detection monitor (Client View).
+            Real-time CCTV feeds & AI activity detection monitor (Client View).
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function ClientDashboard({
             <div className="card-body p-3">
               <div className="text-muted small fw-semibold">PENDING ALERTS</div>
               <h3 className="fw-bold mb-0 text-danger">{pendingCount}</h3>
-              <small className="text-danger"><i className="bi bi-bell me-1"></i>Require Guard Review</small>
+              <small className="text-danger"><i className="bi bi-bell me-1"></i>Require Client Review</small>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function ClientDashboard({
                 <th style={{ width: '150px' }}>Detection Model</th>
                 <th style={{ width: '80px' }}>AI Conf.</th>
                 <th style={{ width: '80px' }}>Severity</th>
-                <th style={{ width: '140px' }} className="text-end">Guard Action</th>
+                <th style={{ width: '140px' }} className="text-end">Action</th>
               </tr>
             </thead>
             <tbody>
@@ -247,9 +247,9 @@ export default function ClientDashboard({
           <div>
             <h5 className="fw-bold mb-0 text-dark">
               <i className="bi bi-grid-fill text-primary me-2"></i>
-              Campus CCTV Camera Grid ({cameras.length} Feeds)
+             CCTV Camera Grid ({cameras.length} Feeds)
             </h5>
-            <small className="text-muted">Live surveillance feeds from campus buildings and gates.</small>
+            <small className="text-muted">Live surveillance feeds from searching areas, buildings and gates.</small>
           </div>
           <span className="badge bg-primary">{onlineCameras} Cameras Active</span>
         </div>

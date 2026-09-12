@@ -311,7 +311,7 @@ export default function AdminDashboard({
                       {u.role === 'admin' ? (
                         <span className="badge bg-danger">Admin</span>
                       ) : (
-                        <span className="badge bg-primary">Client (Guard)</span>
+                        <span className="badge bg-primary">Client</span>
                       )}
                     </td>
                     <td className="small text-muted">
@@ -385,7 +385,7 @@ export default function AdminDashboard({
                   </p>
                   <ul className="small text-muted ps-3 mb-0">
                     <li><strong>Admin Role:</strong> Can register new cameras, toggle cameras on/off, change AI rules, and manage user accounts.</li>
-                    <li><strong>Client Role:</strong> Intended for on-duty security guards. Can only view live streams and acknowledge/resolve incoming alerts.</li>
+                    <li><strong>Client Role:</strong> Intent. Can only view live streams and acknowledge/resolve incoming alerts.</li>
                   </ul>
                 </div>
               </div>
@@ -523,7 +523,7 @@ export default function AdminDashboard({
                       value={newUser.role}
                       onChange={(e) => setNewUser({ ...newUser, role: e.target.value })}
                     >
-                      <option value="client">Client (Security Guard)</option>
+                      <option value="client">Client</option>
                       <option value="admin">Admin (System Administrator)</option>
                     </select>
                   </div>

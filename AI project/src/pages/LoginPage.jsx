@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { INITIAL_USERS } from '../data/mockData';
 
 export default function LoginPage({ onLoginSuccess }) {
-  const [email, setEmail] = useState('guard@campus.edu');
+  const [email, setEmail] = useState('client@campus.edu');
   const [password, setPassword] = useState('password123');
   const [role, setRole] = useState('client');
   const [error, setError] = useState('');
@@ -15,7 +15,7 @@ export default function LoginPage({ onLoginSuccess }) {
     }
     const matched = INITIAL_USERS.find(u => u.email.toLowerCase() === email.toLowerCase()) || {
       id: Date.now(),
-      name: role === 'admin' ? 'Administrator' : 'Security Guard',
+      name: role === 'admin' ? 'Administrator' : 'Client',
       email: email,
       role: role,
       department: role === 'admin' ? 'IT Security Department' : 'Main Gate Security'
@@ -61,7 +61,7 @@ export default function LoginPage({ onLoginSuccess }) {
                     className="btn btn-outline-primary btn-sm"
                     onClick={() => handleQuickDemo('client')}
                   >
-                    Login as Client (Guard)
+                    Login as Client
                   </button>
                   <button 
                     type="button" 
@@ -107,7 +107,7 @@ export default function LoginPage({ onLoginSuccess }) {
                     value={role}
                     onChange={(e) => setRole(e.target.value)}
                   >
-                    <option value="client">Client (Security Guard / Monitor)</option>
+                    <option value="client">Client (Monitor)</option>
                     <option value="admin">Admin (System Administrator)</option>
                   </select>
                 </div>
@@ -116,10 +116,6 @@ export default function LoginPage({ onLoginSuccess }) {
                   Sign In to System
                 </button>
               </form>
-            </div>
-
-            <div className="card-footer bg-light text-center py-2 text-muted small">
-              CSE Department &bull; Final Year Capstone Project
             </div>
           </div>
         </div>

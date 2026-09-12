@@ -13,18 +13,17 @@ export default function Navbar({
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
       <div className="container-fluid px-3">
-        {/* Project Brand */}
+        {}
         <a 
           className="navbar-brand d-flex align-items-center fw-bold" 
           href="#" 
           onClick={(e) => { e.preventDefault(); setCurrentView('dashboard'); }}
         >
           <i className="bi bi-camera-video text-warning me-2"></i>
-          <span>Campus CCTV Surveillance</span>
-          <span className="badge bg-secondary ms-2 small fw-normal">Project</span>
+          <span>CCTV Surveillance with AI Detection</span>
         </a>
 
-        {/* Navbar Toggle */}
+        {}
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -35,7 +34,7 @@ export default function Navbar({
         </button>
 
         <div className="collapse navbar-collapse" id="navbarProject">
-          {/* Navigation Links */}
+          {}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <button 
@@ -68,7 +67,7 @@ export default function Navbar({
               </button>
             </li>
 
-            {/* Admin specific links */}
+            {}
             {currentUser?.role === 'admin' && (
               <>
                 <li className="nav-item">
@@ -91,13 +90,13 @@ export default function Navbar({
             )}
           </ul>
 
-          {/* Right Side: Role, Role Switcher & Logout */}
+          {}
           <div className="d-flex align-items-center gap-2">
             <span className={`badge ${currentUser?.role === 'admin' ? 'bg-danger' : 'bg-primary'} p-2`}>
-              {currentUser?.role === 'admin' ? 'Role: Administrator' : 'Role: Client (Security Guard)'}
+              {currentUser?.role === 'admin' ? 'Role: Administrator' : 'Role: Client'}
             </span>
 
-            {/* 1-Click Role Switcher for Easy Presentation */}
+            {}
             <button 
               onClick={onSwitchRole}
               className="btn btn-sm btn-outline-light"

@@ -8,7 +8,7 @@ import { INITIAL_USERS, INITIAL_CAMERAS, INITIAL_ACTIVITIES, AI_RULE_SETTINGS } 
 
 export default function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-  const [currentUser, setCurrentUser] = useState(INITIAL_USERS[0]); // Default: Client (Security Guard)
+  const [currentUser, setCurrentUser] = useState(INITIAL_USERS[0]);
   const [currentView, setCurrentView] = useState('dashboard');
 
   const [cameras, setCameras] = useState(INITIAL_CAMERAS);
@@ -54,7 +54,6 @@ export default function App() {
     }
   ];
 
-  // Simulate new trigger event
   const handleSimulateTrigger = (forcedCamId = null) => {
     const randomEvent = DEMO_EVENTS[Math.floor(Math.random() * DEMO_EVENTS.length)];
     const cam = forcedCamId 
@@ -81,7 +80,6 @@ export default function App() {
     return created;
   };
 
-  // Acknowledge / Resolve Activity
   const handleAcknowledge = (actId) => {
     setActivities(prev => prev.map(act => {
       if (act.id === actId) {
@@ -108,7 +106,7 @@ export default function App() {
     } else {
       const client = users.find(u => u.role === 'client') || {
         id: 1,
-        name: 'Campus Security Guard',
+        name: 'Campus',
         email: 'guard@campus.edu',
         role: 'client',
         department: 'Campus Security Patrol'
@@ -289,15 +287,13 @@ export default function App() {
         )}
       </main>
 
-      {/* College Project Footer */}
+      {}
       <footer className="bg-white border-top py-3 mt-auto">
         <div className="container-fluid px-4 d-flex flex-column flex-md-row justify-content-between align-items-center text-muted small">
           <div>
-            <strong>Smart CCTV Surveillance & AI Detection System</strong> &copy; {new Date().getFullYear()} &bull; Final Year Project
+            <strong>CCTV Surveillance with AI Detection System</strong> &copy; {new Date().getFullYear()} &bull;
           </div>
-          <div>
-            <span>Frontend: React.js + Bootstrap 5</span>
-          </div>
+
         </div>
       </footer>
     </div>

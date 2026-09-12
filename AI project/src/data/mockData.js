@@ -1,7 +1,5 @@
-// Student Project Mock Data (Smart CCTV Surveillance System)
-
 export const INITIAL_USERS = [
-  { id: 1, name: 'Campus Security Guard', email: 'guard@campus.edu', role: 'client', department: 'Campus Security Patrol' },
+  { id: 1, name: 'Campus Security', email: 'guard@campus.edu', role: 'client', department: 'Campus Security Patrol' },
   { id: 2, name: 'System Administrator', email: 'admin@campus.edu', role: 'admin', department: 'IT & Safety Department' },
   { id: 3, name: 'Main Gate Incharge', email: 'gate@campus.edu', role: 'client', department: 'Main Gate Control' }
 ];
